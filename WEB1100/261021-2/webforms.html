@@ -1,0 +1,74 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="webforms.css"/>
+		<meta name="viewport" content="width=device-width initial-scale=1">
+	</head>
+		<body>
+			<h1>My guestbook Book</h1>
+
+			<form name="gbForm" method="post" action="URLToScript">
+			<fieldset>
+				<legend> Personal Information</legend>
+				<p><label class="question" for="theName"> What is your name?</label>
+					<input type="text" id="theName" name="theName" placeholder="Enter your full name." size="40em" required autofocus />
+				</p>
+				<p>
+					<label class="question" for="theEmail"> What is your email?</label>
+					<input type="email" id="theEmail" name="theEmail" placeholder="Enter your full e-mail." size="40em" required />
+				</p>
+			</fieldset>
+			<fieldset>
+				<legend> Survey Questions</legend>
+				<p><span class="question">Please check all the apply:</span><br>
+					<input type="checkbox" id="likeIt" name="some_statements[]" value="I really like your website."/>
+					<label for="likeIt"> I really like your website.</label><br>
+					<input type="checkbox" id="theBest" name="some_statements[]" value="It's one of the best sites ive seen."/>
+					<label for="theBest"> It's one of the best sites ive seen.</label><br>
+					<input type="checkbox" id="jealous" name="some_statements[]" value="I sure wish my site looked as good as yours"/>
+					<label for="likeIt"> I sure wish my site looked as good as yours.</label><br>
+					<input type="checkbox" id="noTaste" name="some_statements[]" value="I have no taste and I'm pretty dense, so your site didn't do much for me."/>
+					<label for="likeIt"> I have no taste and I'm pretty dense, so your site didn't do much for me.</label><br>
+				</p>
+				<p><label for="chooseScale"><span class="question"> Please rate my site on a scale of 1(poor) to 10(awesomesauce):</span></label><br>
+					<input type="number" id="chooseScale" name="chooseScale" min="1" max="10" step="1" value="5" />
+				</p>
+				<p><span class="question"> Please choose the one thing you love about ny website.:</span><br>
+					<input type="radio" id="thePicture" name="bestThing" value="me" />
+					<label for="thePicture"> The amazing picture of you.</label><br>
+					<input type="radio" id="theCats" name="bestThing" value="cats" />
+					<label for="theCats"> Cats.</label><br>
+					<input type="radio" id="theStory" name="bestThing" value="childhood story" />
+					<label for="theStory"> The Childhood horror story.</label><br>
+					<input type="radio" id="theTreasure" name="bestThing" value="treasure" />
+					<label for="theTreasure"> The amazing Treasure.</label><br>
+				</p>
+				<p><label for="howImprove"> <span class="question"> How can I improve my website?</span></label><br>
+					<select id="howImprove" name="howImprove" size="4" multiple>
+						<option value="You can't. It couldn't be better">You can't. It couldn't be better.</option>
+						<option value="More about the cats"> Kittens are cats.</option>
+						<option value="More about the family"> FEMLY.</option>
+						<option value="More about Elvis"> Good looking Elvis.</option>
+					</select>
+				</p>
+			</fieldset>
+
+			<fieldset>
+				<legend> Free for all</legend>
+				<p><label for="message"><span class="question"> Feel free to send me more precise, gift offers, etc:</span></label><br>
+					<textarea id="message" name="message"></textarea>
+				</p>
+			</fieldset>
+			<br>
+			<div id="buttons">
+				<input type="submit" name="submit" value="submit" />
+				<input type="reset" name="reset" value="reset" />
+				<input type="buttons" name="view" value="view" onClick="person.value=theNameValue" />
+				<p> 
+			</div>
+		</form>
+	</body>
+
+
+

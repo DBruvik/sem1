@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<title>Forms</title>
+	<head>
+	</head>
+		<body>
+			<h1>My Guest Book</h1>
+			<form name="gbForm" method="post" action="URL_to_script">
+				<fieldset>
+					<legend>Personal Inrogmation</legend>
+					<p><label class="question" for="the_name">What is your name?</label>
+						<input type="text" id="the_name" placeholder="Enter your full name." size="40em" required autofocus/>
+					</p>
+					<p><label class="question" for="the_email">What is your e-mail?</label>
+						<input type="e-mail" id="the_mail" placeholder="Enter your e-mail." size="40em" required autofocus/>
+					</p>
+				</fieldset>
+				<fieldset>
+					<legend> Survey Questions</legend>
+					<p><span class="question">Please check all the apply:</span><br>
+						<input type="checkbox" id="like_it" name="some_statements[]" value="I really like your website" />
+						<label for="like_it">I really like your website.</label><br>
+						<input type="checkbox" id="the_best" name="some_statements[]" value="It's one of the best sites i've ever seen" />
+						<label for="the_best">It's one of the best sites i've ever seen.</label><br>
+						<input type="checkbox" id="jealous" name="some_statements[]" value="I sure wish my site looked as good as yours" />
+						<label for="jealous">I sure wish my site looked as good as yours.</label><br>
+						<input type="checkbox" id="no_taste" name="some_statements[]" value="I have no taste"/>
+						<label for="no_taste">I have no taste.</label><br>
+					</p>
+					<p><label for="choose_scale"><span class="question">Please rate my site on a scale of 1 to 10:</span></label><br>
+						<input type="number" id="choose_scale" name="choose_scale" min="1" max="10" step="1" value="5" />
+					</p>
+					<p><span class="question">Please choose the one thing you love best about my website:</span><br>
+						<input type="radio" id="the_picture" name="best_thing" value="me"/>
+						<label for="the_picture">The Amazing picture of you.</label><br>
+						<input type="radio" id="the_cats" name="the_cats" value="cats" />
+						<label for="the_cats">All the cats.</label><br>
+						<input type="radio" id="the_story" name="the_story" value="story"/>
+						<label for="the_story">My story.</label><br>
+						<input type="radio" id="the_treasure" name="the_treasure" value="treasure"/>
+						<label for="the_treasure">My treasure.</label>
+					</p>
+					<p><label for="how_improve"><span class="question">How can I improve on my website?</span></label><br>
+						<select id="how_improve" name="how_improve" size="4" multipe>
+							<option value="You can't. It couldn't be better">You can't. It couldn't be better</option>
+							<option value="More about the cats">More about the cats</option>
+							<option value="More about the family">More about the family</option>
+							<option value="More about the Elvis">More about the Elvis</option>
+						</select>
+					</p>
+				</fieldset>
+
+				<fieldset>
+					<legend>Free for all!</legend>
+					<p><label for="message"><span class="question">Feel free to send me more precise, gift offers, etc: </span></label><br>
+						<textarea id="message" name="message"></textarea>
+					</p>
+				</fieldset>
+				<br>
+				<div id="buttons">
+					<input type="submit" name="submit" value="submit"/>
+					<input type="reset" name="reset" value="reset"/>
+				</div>
+			</form>
+		</body>
+</html>
+
